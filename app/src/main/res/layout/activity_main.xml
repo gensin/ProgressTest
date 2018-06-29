@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <FrameLayout
+        android:id="@+id/progress_background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detailed_progress_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/progress_background_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="12"
+            android:textColor="@color/light_grey"
+            android:textSize="10dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detailed_progress_member"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/progress_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+    </FrameLayout>
+
+    <com.xiaochen.progressroundbutton.AnimDownloadProgressButton
+        android:id="@+id/anim_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:textSize="8dp"
+        app:progressbtn_radius="28"
+        app:progressbtn_backgroud_color="@color/colorPrimary"
+        app:progressbtn_backgroud_second_color="@color/membershipSubtitleColor"
+        app:progressbtn_text_color="@color/light_grey"
+        app:progressbtn_text_covercolor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
