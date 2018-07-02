@@ -66,10 +66,9 @@
     <com.xiaochen.progressroundbutton.AnimDownloadProgressButton
         android:id="@+id/anim_btn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="16dp"
         android:layout_marginTop="16dp"
         android:padding="5dp"
-        android:textSize="8dp"
         app:progressbtn_radius="28"
         app:progressbtn_backgroud_color="@color/colorPrimary"
         app:progressbtn_backgroud_second_color="@color/membershipSubtitleColor"
